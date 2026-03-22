@@ -1,0 +1,5 @@
+fastapi -- Web API フレームワーク本体
+uvicorn -- FastAPIを動かすASGIサーバー
+sqlalchemy -- DB(SQLite)とやり取りするORM
+pydantic -- UserSchemaを作るために使用
+python-multipart -- CSVアップロード(File Upload)に使用
