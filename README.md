@@ -14,7 +14,7 @@
 ## 🚀 使用技術
 
 ### Backend
-- Python 3.11
+- Python 3.9（※安定動作のため）
 - FastAPI
 - SQLAlchemy
 - SQLite
@@ -36,6 +36,10 @@
 project-root/
 ├── backend/
 │   ├── app/
+│   │   ├── main.py
+│   │   ├── routers/
+│   │   ├── models/
+│   │   └── schemas/
 │   ├── requirements.txt
 │   ├── sqlite.db
 │   └── users.csv
@@ -50,14 +54,29 @@ project-root/
 
 ## ▶️ 起動方法
 
-```bash
+```
+## Backend
+cd backend
 pip install -r requirements.txt
 uvicorn app.main:app --reload
+
+## Frontend
+cd frontend
+npm install
+npm run dev
+
 ```
 
-起動後、以下にアクセスすると Swagger UI が利用できます：
+## ▶️ アプリ起動後のアクセス先
 
-http://127.0.0.1:8000/docs
+---
+
+Backend (FastAPI)  
+http://127.0.0.1:8000
+Swagger UI: http://127.0.0.1:8000/docs
+
+Frontend (React)  
+http://127.0.0.1:5173
 
 ---
 
@@ -104,8 +123,7 @@ VSCode の **SQLite Viewer** 拡張機能を使用して、
 - JWT 認証の追加
 - ユーザ検索 API の追加
 - ログ管理機能の追加
-- TypeScript + React を使用したフロントエンド画面の実装  
-  - ユーザ一覧表示  
-  - ユーザ登録フォーム  
-  - CSV アップロード UI  
-  - FastAPI と連携した API クライアントの実装
+- フロントエンド UI の改善
+  - デザイン調整
+  - バリデーション強化
+  - エラーハンドリングの追加
