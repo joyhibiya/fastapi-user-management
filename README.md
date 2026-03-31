@@ -1,14 +1,19 @@
 # FastAPI User Management API
 
-このプロジェクトは **FastAPI** を使用したユーザ管理 API です。  
-CRUD 操作に加えて、**CSV アップロードによるユーザの一括登録**に対応しています。  
-データ永続化には **SQLite + SQLAlchemy** を採用しており、  
-業務規模に応じて **PostgreSQL への移行**も容易に行える構成になっています。
+このプロジェクトは FastAPI（バックエンド）と React + TypeScript（フロントエンド）で構築した
+ユーザー管理アプリケーションです。
+
+- ユーザー一覧表示
+- ユーザー削除
+- CSV アップロードによる一括登録
+- SQLite + SQLAlchemy によるデータ永続化
+
 
 ---
 
 ## 🚀 使用技術
 
+### Backend
 - Python 3.11
 - FastAPI
 - SQLAlchemy
@@ -16,26 +21,29 @@ CRUD 操作に加えて、**CSV アップロードによるユーザの一括登
 - Pydantic
 - Uvicorn
 
+### Frontend
+- React
+- TypeScript
+- Vite
+- Fetch API
+
+
 ---
 
 ## 📁 フォルダ構成
 
 ```
-python-log-tool/
-├── app/
-│   ├── test.py
-│   ├── database.py
-│   ├── models/
-│   │   └── user.py
-│   ├── schemas/
-│   │   └── user.py
-│   └── routers/
-│       ├── users.py
-│       └── csv.py
-├── sqlite.db
-├── users.csv
-├── README.md
-└── requirements.txt
+project-root/
+├── backend/
+│   ├── app/
+│   ├── requirements.txt
+│   ├── sqlite.db
+│   └── users.csv
+└── frontend/
+    ├── src/
+    ├── package.json
+    └── vite.config.ts
+
 ```
 
 ---
